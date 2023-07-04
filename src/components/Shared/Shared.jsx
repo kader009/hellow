@@ -76,10 +76,10 @@ modalClose.addEventListener('click', () => {
     </thead>
     <tbody>
       <tr>
-        <td className="py-2 px-4 border-b">Process 1</td>
-        <td className="py-2 px-4 border-b">At 7:00Am, only on Monday</td>
-        <td className="py-2 px-4 border-b"><FontAwesomeIcon className='text-grey-100' icon={faClockRotateLeft}/> <span className='ms-1'>in 13 hours</span></td>
-        <td><FontAwesomeIcon className='text-green-600' icon={faSquareCheck}/> <span>Success</span></td>
+        <td className="py-2 px-4 text-black-700 border-b">Process 1</td>
+        <td className="py-2 px-4 text-black-700 border-b">At 7:00Am, only on Monday</td>
+        <td className="py-2 px-4 text-black-700 border-b"><FontAwesomeIcon className='text-grey-100' icon={faClockRotateLeft}/> <span className='ms-1 text-black-700'>in 13 hours</span></td>
+        <td><FontAwesomeIcon className='text-green-600' icon={faSquareCheck}/> <span className='text-black-700'>Success</span></td>
         <td>
         <button id="modalTrigger" className=" text-grey-300 font-bold ms-2 py-2 px-4 rounded" onClick={() => modalData()}>
         <FontAwesomeIcon icon={faPowerOff}/>
@@ -87,10 +87,10 @@ modalClose.addEventListener('click', () => {
         </td>
       </tr>
       <tr>
-        <td className="py-2 px-4 border-b">Process 2</td>
-        <td className="py-2 px-4 border-b">At 10:00Am, only on Friday</td>
-        <td className="py-2 px-4 border-b"><FontAwesomeIcon icon={faClockRotateLeft} /> <span className='ms-1'>in 10 hours</span></td>
-        <td><FontAwesomeIcon className='text-red-700' icon={faSquareXmark} /> <span>Failed</span></td>
+        <td className="py-2 px-4 text-black-700 border-b">Process 2</td>
+        <td className="py-2 px-4 text-black-700 border-b">At 10:00Am, only on Friday</td>
+        <td className="py-2 px-4 text-black-700 border-b"><FontAwesomeIcon icon={faClockRotateLeft} /> <span className='ms-1 text-black-700'>in 10 hours</span></td>
+        <td><FontAwesomeIcon className='text-red-700' icon={faSquareXmark} /> <span className='text-black-700'>Failed</span></td>
         <td>
         <button id="modalTrigger2" className=" text-grey-300 font-bold ms-2 py-2 px-4 rounded" onClick={() => modalData()}>
         <FontAwesomeIcon icon={faPowerOff}/>
@@ -109,7 +109,7 @@ modalClose.addEventListener('click', () => {
         <button
           disabled={currentPage === 1}
           onClick={() => setCurrentPage((prevPage) => prevPage - 1)}
-          className="px-4 py-2 mx-1 bg-gray-200 hover:bg-gray-300 rounded"
+          className="px-4 py-2 mx-1 bg-gray-200 hover:bg-gray-300 rounded text-black-700"
         >
           Previous
         </button>
@@ -120,7 +120,7 @@ modalClose.addEventListener('click', () => {
             key={pageNumber}
             onClick={() => setCurrentPage(pageNumber)}
             className={`px-4 py-2 mx-1 ${
-              currentPage === pageNumber ? 'bg-blue-500 text-white' : 'bg-gray-200 hover:bg-gray-300'
+              currentPage === pageNumber ? 'bg-blue-500 text-black-700' : 'bg-gray-200 hover:bg-gray-300'
             } rounded`}
           >
             {pageNumber}
@@ -131,7 +131,7 @@ modalClose.addEventListener('click', () => {
         <button
           disabled={currentPage === totalPages}
           onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
-          className="px-4 py-2 mx-1 bg-gray-200 hover:bg-gray-300 rounded"
+          className="px-4 py-2 mx-1 bg-gray-200 hover:bg-gray-300 rounded text-black-700"
         >
           Next
         </button>
